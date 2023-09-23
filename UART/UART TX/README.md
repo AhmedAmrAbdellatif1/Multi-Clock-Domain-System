@@ -64,17 +64,17 @@ The Serializer block is responsible for converting parallel data received on the
 
 ![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/534fdc9d-12ae-4b58-81b7-31c727dc5100)
 
-### 2. Parity Calculator
+### 2. Parity Calculator ([parity_calc.v](./parity_calc.v))
 The Parity Calculator block determines the parity bit for the serial frame, ensuring data integrity during transmission. Depending on the configuration, it calculates and inserts either an even or odd parity bit into the frame.
 
 ![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/4e539160-5e00-49f8-bb66-b420275fd3b2)
 
-### 3. MUX (Multiplexer)
+### 3. MUX (Multiplexer) ([MUX.v](./MUX.v))
 The MUX block selects the appropriate bit from the serial frame for output, facilitating the serial data transmission. It plays a critical role in the serialization process.
 
 ![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/193f6e9a-1b06-40d2-895d-7c51ce069470)
 
-### 4. FSM (Finite State Machine)
+### 4. FSM (Finite State Machine) ([FSM.v](./FSM.v))
 The FSM block controls the flow of data transmission, ensuring that data is sent in the correct order and at the right time. It orchestrates the operation of the entire UART TX block.
 
 ![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/2fd8fb14-f818-4590-8b4d-56cfbaf6c690)
