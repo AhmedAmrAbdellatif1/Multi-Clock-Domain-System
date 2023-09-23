@@ -39,7 +39,6 @@ The ALU block has the following interface:
 | 0001  | Content Cell  | Content Cell  |
 | 0010  | Content Cell  | Content Cell  |
 | 0011  | Content Cell  | Content Cell  |
-| ------------- | ------------- | ------------- |
 | 0100  | Content Cell  | Content Cell  |
 | 0101  | Content Cell  | Content Cell  |
 | 0110  | Content Cell  | Content Cell  |
