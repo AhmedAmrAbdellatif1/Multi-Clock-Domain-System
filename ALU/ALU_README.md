@@ -33,24 +33,29 @@ The ALU block has the following interface:
 > For a better understanding of how the ALU block is implemented in RTL (Register-Transfer Level) code, please refer to the `ALU.v` file in this repository.
 
 ## ALU Function Table
-|  | ALU_FUN  | OPERATION | ALU_OUT |
-| ------------- | ------------- | ------------- | ------------- |
-| 0000 | Arithmetic | Content Cell  | Content Cell  |
-| 0001 | ^           | Content Cell  | Content Cell  |
-| 0010 | ^           | Content Cell  | Content Cell  |
-| 0011 | ^           | Content Cell  | Content Cell  |
-| 0100 | Logic  | Content Cell  | Content Cell  |
-| 0101 |^           | Content Cell  | Content Cell  |
-| 0110 |^           | Content Cell  | Content Cell  |
-| 0111 |^           | Content Cell  | Content Cell  |
-| 1000 | Compare | Content Cell  | Content Cell  |
-| 1001 |^           | Content Cell  | Content Cell  |
-| 1010 |^           | Content Cell  | Content Cell  |
-| 1011 |^           | Content Cell  | Content Cell  |
-| 1100 | Shift | Content Cell  | Content Cell  |
-| 1101 |^           | Content Cell  | Content Cell  |
-| 1110 |^           | Content Cell  | Content Cell  |
-| 1111 |^           | Content Cell  | Content Cell  |
+{| class="wikitable" 
+|-
+! ALU_FUN
+! colspan="2" style="text-align:center;" | OPERATION
+! ALU_OUT
+|-
+| 0000
+| rowspan="4" | Arithmetic
+| Addition<br />
+| 
+|-
+| 0001
+| Subtraction
+| 
+|-
+| 0010
+| Multiplication
+| 
+|-
+| 0011
+| Division
+| 
+|}
 
 ## Elaborated Design
 The ALU block has the following interface:
