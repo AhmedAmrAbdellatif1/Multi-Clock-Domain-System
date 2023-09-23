@@ -35,21 +35,21 @@ The ALU block has the following interface:
 ## ALU Function Table
 |  | ALU_FUN  | OPERATION | ALU_OUT |
 | ------------- | ------------- | ------------- | ------------- |
-| 0000 | Arithmetic | Content Cell  | Content Cell  |
-| 0001 |            | Content Cell  | Content Cell  |
-| 0010 |            | Content Cell  | Content Cell  |
+| 0000 | Arithmetic | Content Cell  | Content Cell  \
+| 0001 |            | Content Cell  | Content Cell  \
+| 0010 |            | Content Cell  | Content Cell  \
 | 0011 |            | Content Cell  | Content Cell  |
-| 0100 | Logic  | Content Cell  | Content Cell  |
-| 0101 |            | Content Cell  | Content Cell  |
-| 0110 |            | Content Cell  | Content Cell  |
+| 0100 | Logic  | Content Cell  | Content Cell  \
+| 0101 |            | Content Cell  | Content Cell  \
+| 0110 |            | Content Cell  | Content Cell  \
 | 0111 |            | Content Cell  | Content Cell  |
-| 1000 | Compare | Content Cell  | Content Cell  |
-| 1001 |            | Content Cell  | Content Cell  |
-| 1010 |            | Content Cell  | Content Cell  |
+| 1000 | Compare | Content Cell  | Content Cell  \
+| 1001 |            | Content Cell  | Content Cell  \
+| 1010 |            | Content Cell  | Content Cell  \
 | 1011 |            | Content Cell  | Content Cell  |
-| 1100 | Shift | Content Cell  | Content Cell  |
-| 1101 |            | Content Cell  | Content Cell  |
-| 1110 |            | Content Cell  | Content Cell  |
+| 1100 | Shift | Content Cell  | Content Cell  \
+| 1101 |            | Content Cell  | Content Cell  \
+| 1110 |            | Content Cell  | Content Cell  \
 | 1111 |            | Content Cell  | Content Cell  |
 
 ## Elaborated Design
