@@ -39,38 +39,108 @@ The ALU block has the following interface:
   overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
   font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-c4ww{background-color:#cbcefb;border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-baqh{text-align:center;vertical-align:top}
 .tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
-.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
 </style>
-<table class="tg">
+<table class="tg" style="undefined;table-layout: fixed; width: 553px">
+<colgroup>
+<col style="width: 148.2px">
+<col style="width: 123.2px">
+<col style="width: 155.2px">
+<col style="width: 126.2px">
+</colgroup>
 <thead>
   <tr>
-    <th class="tg-0pky">ALU_FUN</th>
-    <th class="tg-c3ow" colspan="2">OPERATION</th>
-    <th class="tg-0pky">ALU_OUT</th>
+    <th class="tg-c4ww">ALU_FUN</th>
+    <th class="tg-c4ww" colspan="2">OPERATION</th>
+    <th class="tg-c4ww">ALU_OUT</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td class="tg-0pky">0000</td>
-    <td class="tg-0pky" rowspan="4">Arithmetic</td>
-    <td class="tg-0pky">Addition<br></td>
-    <td class="tg-0pky"></td>
+    <td class="tg-c3ow">0000</td>
+    <td class="tg-c3ow" rowspan="4"><br><br><br><br>Arithmetic</td>
+    <td class="tg-c3ow">Addition</td>
+    <td class="tg-c3ow">A+B</td>
   </tr>
   <tr>
-    <td class="tg-0pky">0001</td>
-    <td class="tg-0pky">Subtraction</td>
-    <td class="tg-0pky"></td>
+    <td class="tg-c3ow">0001</td>
+    <td class="tg-c3ow">Subtraction</td>
+    <td class="tg-c3ow">A-B</td>
   </tr>
   <tr>
-    <td class="tg-0pky">0010</td>
-    <td class="tg-0pky">Multiplication</td>
-    <td class="tg-0pky"></td>
+    <td class="tg-c3ow">0010</td>
+    <td class="tg-c3ow">Multiplication</td>
+    <td class="tg-c3ow">A*B</td>
   </tr>
   <tr>
-    <td class="tg-0pky">0011</td>
-    <td class="tg-0pky">Division</td>
-    <td class="tg-0pky"></td>
+    <td class="tg-c3ow">0011</td>
+    <td class="tg-c3ow">Division</td>
+    <td class="tg-c3ow">A/B</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">0100</td>
+    <td class="tg-baqh" rowspan="4"><br><br><br><br>Logic</td>
+    <td class="tg-baqh">AND</td>
+    <td class="tg-baqh">A&amp;B</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">0101</td>
+    <td class="tg-baqh">OR</td>
+    <td class="tg-baqh">A|B</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">0110</td>
+    <td class="tg-baqh">NAND</td>
+    <td class="tg-baqh">~(A&amp;B)</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">0111</td>
+    <td class="tg-baqh">NOR</td>
+    <td class="tg-baqh">~(A|B)</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">1000</td>
+    <td class="tg-baqh" rowspan="4"><br><br><br><br>Compare</td>
+    <td class="tg-baqh">NOP</td>
+    <td class="tg-baqh">0</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">1001</td>
+    <td class="tg-baqh">if A==B ?</td>
+    <td class="tg-baqh">1 : 0</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">1010</td>
+    <td class="tg-baqh">if A &gt; B ?</td>
+    <td class="tg-baqh">2 : 0</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">1011</td>
+    <td class="tg-baqh">if A &lt; B ?</td>
+    <td class="tg-baqh">3 : 0</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">1100</td>
+    <td class="tg-baqh" rowspan="4"><br><br><br>Shift<br></td>
+    <td class="tg-baqh">LSR to A</td>
+    <td class="tg-baqh">A &gt;&gt; 1</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">1101</td>
+    <td class="tg-baqh">LSL to A</td>
+    <td class="tg-baqh">A &lt;&lt; 1</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">1110</td>
+    <td class="tg-baqh">LSR to B</td>
+    <td class="tg-baqh">B &gt;&gt; 1</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh">1111</td>
+    <td class="tg-baqh">LSL to B</td>
+    <td class="tg-baqh">B &lt;&lt; 1</td>
   </tr>
 </tbody>
 </table>
