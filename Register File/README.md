@@ -37,7 +37,7 @@ The Register File block has the following interface:
  
   ![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/fcefdc49-c7f5-49ff-bae6-ab6169afaa6f)
 
-  > For a better understanding of how the Rgister File block is implemented in RTL (Register-Transfer Level) code, please refer to the `RegFile.v` file in this repository.
+  > For a better understanding of how the Rgister File block is implemented in RTL (Register-Transfer Level) code, please refer to the [`RegFile.v`](./RegFile.v) file in this repository.
 
 
 ## Usage
@@ -55,7 +55,7 @@ To effectively utilize the Register File block within our system, follow these s
 
 ![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/5fc04b56-df8f-46d0-8ee3-ed82ba8c4ff3)
 
-## Testbench
+## [Testbench](./RegFile_tb.v)
 
 ![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/da78748f-1381-44da-b3cf-c388d6be6760)
 
