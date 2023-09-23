@@ -53,7 +53,7 @@ To effectively utilize the Register File block within our system, follow these s
 
 ## Elaborated Design
 
-![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/1e8efb0f-a027-4d24-9e7d-a0fea8e9899e)
+![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/5fc04b56-df8f-46d0-8ee3-ed82ba8c4ff3)
 
 ## Testbench
 
