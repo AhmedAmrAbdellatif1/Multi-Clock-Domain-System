@@ -36,9 +36,9 @@ The ALU block has the following interface:
 |  | ALU_FUN  | OPERATION | ALU_OUT |
 | ------------- | ------------- | ------------- | ------------- |
 | 0000 | Arithmetic | Content Cell  | Content Cell  |
-| 0001 |^           | Content Cell  | Content Cell  |
-| 0010 |^           | Content Cell  | Content Cell  |
-| 0011 |^           | Content Cell  | Content Cell  |
+| 0001 | ^           | Content Cell  | Content Cell  |
+| 0010 | ^           | Content Cell  | Content Cell  |
+| 0011 | ^           | Content Cell  | Content Cell  |
 | 0100 | Logic  | Content Cell  | Content Cell  |
 | 0101 |^           | Content Cell  | Content Cell  |
 | 0110 |^           | Content Cell  | Content Cell  |
