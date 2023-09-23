@@ -1,4 +1,4 @@
-![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/a50c7619-3de0-4a76-9ccf-b0716aac4ac0)# UART RX (Receiver) Block
+# UART RX (Receiver) Block
 
 ## Overview
 The UART RX (Receiver) block is a pivotal component in our multi-clock domain system, responsible for receiving UART frames and ensuring data integrity. It plays a crucial role in receiving and processing data from a master device through the UART interface.
