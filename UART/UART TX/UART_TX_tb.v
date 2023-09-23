@@ -87,8 +87,8 @@ module UART_TX_tb();
     adding_new_data(input_data[0],expec_out[0]);
     
     //$display("/********** Two Successive Bytes **********/");
-    //two_success_bytes(input_data[0],expec_out[0],input_data[3],expec_out[3]); we disabled this feature in [FSM.v](./FSM.v)
-
+    //two_success_bytes(input_data[0],expec_out[0],input_data[3],expec_out[3]); we disabled this feature in FSM.v line 64
+    
     #(5*CLK_PERIOD) $stop;
   end
   
