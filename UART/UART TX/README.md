@@ -55,6 +55,29 @@ To effectively use the UART TX block, consider the following specifications:
     - 1: Specifies odd parity.
 
 ## Elaborated Design
+The UART TX block is composed of four primary blocks, each serving a unique function:
+
+![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/f261060e-718b-4ba0-b429-9600d08de267)
+
+### 1. Serializer
+The Serializer block is responsible for converting parallel data received on the `P_DATA` bus into a serial frame for transmission. It performs the task of serializing the data efficiently.
+
+![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/534fdc9d-12ae-4b58-81b7-31c727dc5100)
+
+### 2. Parity Calculator
+The Parity Calculator block determines the parity bit for the serial frame, ensuring data integrity during transmission. Depending on the configuration, it calculates and inserts either an even or odd parity bit into the frame.
+
+![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/4e539160-5e00-49f8-bb66-b420275fd3b2)
+
+### 3. MUX (Multiplexer)
+The MUX block selects the appropriate bit from the serial frame for output, facilitating the serial data transmission. It plays a critical role in the serialization process.
+
+![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/193f6e9a-1b06-40d2-895d-7c51ce069470)
+
+### 4. FSM (Finite State Machine)
+The FSM block controls the flow of data transmission, ensuring that data is sent in the correct order and at the right time. It orchestrates the operation of the entire UART TX block.
+
+![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/2fd8fb14-f818-4590-8b4d-56cfbaf6c690)
 
 
 ## [Testbench](./UART_TX_tb.v)
