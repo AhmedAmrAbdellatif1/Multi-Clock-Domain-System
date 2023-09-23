@@ -1,7 +1,7 @@
 # Arithmetic Logic Unit (ALU) Block
 
 ## Overview
-The Arithmetic Logic Unit (ALU) is a fundamental component of our multi-clock domain mini-processor system. It plays a critical role in executing various arithmetic and logic operations, enabling the processor to perform tasks such as addition, subtraction, logical AND, logical OR, and more.
+The Arithmetic Logic Unit (ALU) is a fundamental component of our multi-clock domain system. It plays a critical role in executing various arithmetic and logic operations, enabling the processor to perform tasks such as addition, subtraction, logical AND, logical OR, and more.
 
 ## Block Description
 The ALU block is responsible for the following key functions:
