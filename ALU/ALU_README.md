@@ -33,29 +33,47 @@ The ALU block has the following interface:
 > For a better understanding of how the ALU block is implemented in RTL (Register-Transfer Level) code, please refer to the `ALU.v` file in this repository.
 
 ## ALU Function Table
-{| class="wikitable" 
-|-
-! ALU_FUN
-! colspan="2" style="text-align:center;" | OPERATION
-! ALU_OUT
-|-
-| 0000
-| rowspan="4" | Arithmetic
-| Addition<br />
-| 
-|-
-| 0001
-| Subtraction
-| 
-|-
-| 0010
-| Multiplication
-| 
-|-
-| 0011
-| Division
-| 
-|}
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0pky">ALU_FUN</th>
+    <th class="tg-c3ow" colspan="2">OPERATION</th>
+    <th class="tg-0pky">ALU_OUT</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0pky">0000</td>
+    <td class="tg-0pky" rowspan="4">Arithmetic</td>
+    <td class="tg-0pky">Addition<br></td>
+    <td class="tg-0pky"></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">0001</td>
+    <td class="tg-0pky">Subtraction</td>
+    <td class="tg-0pky"></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">0010</td>
+    <td class="tg-0pky">Multiplication</td>
+    <td class="tg-0pky"></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">0011</td>
+    <td class="tg-0pky">Division</td>
+    <td class="tg-0pky"></td>
+  </tr>
+</tbody>
+</table>
 
 ## Elaborated Design
 The ALU block has the following interface:
