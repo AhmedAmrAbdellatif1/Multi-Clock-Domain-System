@@ -66,4 +66,6 @@ To effectively use the UART RX block, consider the following specifications:
 
 ## Elaborated Design
 
+![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/770cb745-842c-40b8-8467-7777ac143f86)
+
 ## [Testbench](./UART_RX_tb.v)
