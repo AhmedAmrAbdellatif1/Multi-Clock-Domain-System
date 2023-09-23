@@ -82,3 +82,23 @@ The FSM block controls the flow of data transmission, ensuring that data is sent
 
 ## [Testbench](./UART_TX_tb.v)
 
+![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/c799d6f1-91df-410e-8d11-56f71768f413)
+
+```
+# /********** Even Parity Testcases **********/
+# MISMATCH: 00000000000 -> EVEN PARITY TESTCASE [PASSED]
+# MISMATCH: 00000000000 -> EVEN PARITY TESTCASE [PASSED]
+# MISMATCH: 00000000000 -> EVEN PARITY TESTCASE [PASSED]
+# /********** Odd Parity Testcases **********/
+# MISMATCH: 00000000000 ->  ODD PARITY TESTCASE [PASSED]
+# MISMATCH: 00000000000 ->  ODD PARITY TESTCASE [PASSED]
+# MISMATCH: 00000000000 ->  ODD PARITY TESTCASE [PASSED]
+# /********** NO Parity Testcases **********/
+# MISMATCH:  0000000000 ->   NO PARITY TESTCASE [PASSED]
+# MISMATCH:  0000000000 ->   NO PARITY TESTCASE [PASSED]
+# MISMATCH:  0000000000 ->   NO PARITY TESTCASE [PASSED]
+# /**** Passing New Data While Transmission ****/
+# MISMATCH: 00000000000 -> IGNORING INPUT TESTCASE [PASSED]
+```
+
+
