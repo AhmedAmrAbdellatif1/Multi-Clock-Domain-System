@@ -30,7 +30,7 @@ The ALU block has the following interface:
  
     ![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/a6ffe5d3-5075-43a7-8131-ca9e2a48fc57)
 
-  > For a better understanding of how the ALU block is implemented in RTL (Register-Transfer Level) code, please refer to the [`ALU.v`](./ALU.v) file in this repository.
+> For a better understanding of how the ALU block is implemented in RTL (Register-Transfer Level) code, please refer to the [`ALU.v`](./ALU.v) file in this repository.
 
 ## ALU Function Table
 
