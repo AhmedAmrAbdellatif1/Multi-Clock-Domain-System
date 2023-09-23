@@ -33,24 +33,24 @@ The ALU block has the following interface:
 > For a better understanding of how the ALU block is implemented in RTL (Register-Transfer Level) code, please refer to the `ALU.v` file in this repository.
 
 ## ALU Function Table
-| | | ALU_FUN  | OPERATION | ALU_OUT |
+| ------------- | | ALU_FUN  | OPERATION | ALU_OUT |
 | ------------- | ------------- | ------------- | ------------- |
 |Arithmetic| | 0000  | Content Cell  | Content Cell  |
-| | | 0001  | Content Cell  | Content Cell  |
-| | | 0010  | Content Cell  | Content Cell  |
-| | | 0011  | Content Cell  | Content Cell  |
+| | 0001  | Content Cell  | Content Cell  |
+| | 0010  | Content Cell  | Content Cell  |
+| | 0011  | Content Cell  | Content Cell  |
 |Logic| | 0100  | Content Cell  | Content Cell  |
-| | | 0101  | Content Cell  | Content Cell  |
-| | | 0110  | Content Cell  | Content Cell  |
-| | | 0111  | Content Cell  | Content Cell  |
+| | 0101  | Content Cell  | Content Cell  |
+| | 0110  | Content Cell  | Content Cell  |
+| | 0111  | Content Cell  | Content Cell  |
 |Compare| | 1000  | Content Cell  | Content Cell  |
-| | | 1001  | Content Cell  | Content Cell  |
-| | | 1010  | Content Cell  | Content Cell  |
-| | | 1011  | Content Cell  | Content Cell  |
+|  | 1001  | Content Cell  | Content Cell  |
+| | 1010  | Content Cell  | Content Cell  |
+|  | 1011  | Content Cell  | Content Cell  |
 |Shift| | 1100  | Content Cell  | Content Cell  |
-| | | 1101  | Content Cell  | Content Cell  |
-| | | 1110  | Content Cell  | Content Cell  |
-| | | 1111  | Content Cell  | Content Cell  |
+|  | 1101  | Content Cell  | Content Cell  |
+|  | 1110  | Content Cell  | Content Cell  |
+|  | 1111  | Content Cell  | Content Cell  |
 
 ## Elaborated Design
 The ALU block has the following interface:
