@@ -33,14 +33,7 @@ The ALU block has the following interface:
 > For a better understanding of how the ALU block is implemented in RTL (Register-Transfer Level) code, please refer to the `ALU.v` file in this repository.
 
 ## ALU Function Table
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
-</style>
+
 <table class="tg" style="undefined;table-layout: fixed; width: 563px">
 <colgroup>
 <col style="width: 151.2px">
@@ -58,7 +51,7 @@ The ALU block has the following interface:
 <tbody>
   <tr>
     <td class="tg-c3ow">0000</td>
-    <td class="tg-c3ow" rowspan="4"><br><br><br><br>Arithmetic</td>
+    <td class="tg-c3ow" rowspan="4">Arithmetic<br></td>
     <td class="tg-c3ow">Addition</td>
     <td class="tg-c3ow">A+B</td>
   </tr>
@@ -79,7 +72,7 @@ The ALU block has the following interface:
   </tr>
   <tr>
     <td class="tg-c3ow">0100</td>
-    <td class="tg-c3ow" rowspan="4"><br><br><br><br>Logic</td>
+    <td class="tg-c3ow" rowspan="4">Logic<br></td>
     <td class="tg-c3ow">AND</td>
     <td class="tg-c3ow">A&amp;B</td>
   </tr>
@@ -100,7 +93,7 @@ The ALU block has the following interface:
   </tr>
   <tr>
     <td class="tg-c3ow">1000</td>
-    <td class="tg-c3ow" rowspan="4"><br><br><br><br>Compare</td>
+    <td class="tg-c3ow" rowspan="4">Compare<br></td>
     <td class="tg-c3ow">NOP</td>
     <td class="tg-c3ow">0</td>
   </tr>
@@ -121,7 +114,7 @@ The ALU block has the following interface:
   </tr>
   <tr>
     <td class="tg-c3ow">1100</td>
-    <td class="tg-c3ow" rowspan="4"><br><br><br>Shift<br></td>
+    <td class="tg-c3ow" rowspan="4">Shift<br></td>
     <td class="tg-c3ow">LSR to A</td>
     <td class="tg-c3ow">A &gt;&gt; 1</td>
   </tr>
