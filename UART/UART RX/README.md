@@ -71,37 +71,37 @@ The UART RX block is composed of several essential components, each serving a un
 
 ![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/770cb745-842c-40b8-8467-7777ac143f86)
 
-### 1. Deserializer
+### 1. Deserializer ([deserializer.v](./deserializer.v))
 The Deserializer converts the incoming serial data into parallel data, making it accessible for further processing within the block.
 
 ![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/6caa323c-978d-4428-8193-aa0e57ca87fe)
 
-### 2. Edge Bit Counter
+### 2. Edge Bit Counter ([edge_bit_counter.v](./edge_bit_counter.v))
 The Edge Bit Counter is used to determine the sampling time at the mid-time of each bit, ensuring accurate data sampling.
 
 ![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/8146708a-31a1-4bbf-8854-ad1ad2c37863)
 
-### 3. Data Sampling
+### 3. Data Sampling ([data_sampling.v](./data_sampling.v))
 Data Sampling is responsible for the actual sampling of the received data, ensuring that the data is captured accurately.
 
 ![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/bf634e67-29b9-4d28-8834-422bf6c312f0)
 
-### 4. Parity Check
+### 4. Parity Check ([parity_check.v](./parity_check.v))
 The Parity Check component verifies the parity bit in the received frame, ensuring data integrity. If the parity bit does not match, a `PAR_ERR` signal is raised.
 
 ![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/3851e579-3328-47f5-88ad-cba65af039d7)
 
-### 5. Start Bit Check
+### 5. Start Bit Check ([start_check.v](./start_check.v))
 Start Bit Check verifies the start bit of the received frame to ensure that data reception begins correctly.
 
 ![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/2c481d2e-d0be-4b55-a97d-0ae9a2e92299)
 
-### 6. Stop Bit Check
+### 6. Stop Bit Check ([stop_check.v](./stop_check.v))
 Stop Bit Check ensures that the stop bit of the received frame is set to 1, indicating the end of data transmission. If the stop bit is incorrect, an `STP_ERR` signal is raised.
 
 ![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/1f555bca-7fa4-4b46-811e-3118e8606ee7)
 
-### 7. Finite State Machine (FSM)
+### 7. Finite State Machine (FSM) ([FSM.v](./FSM.v))
 The Finite State Machine (FSM) governs the overall flow of the UART RX block, orchestrating the transitions between different states based on received data and control signals.
 
 ![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/d34060b6-3834-4e73-895f-5bc902084a36)
