@@ -67,7 +67,57 @@ To effectively use the UART RX block, consider the following specifications:
 - The prescale value determines the clock speed of UART_RX to the speed of UART_TX.
 
 ## Elaborated Design
+The UART RX block is composed of several essential components, each serving a unique function:
 
 ![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/770cb745-842c-40b8-8467-7777ac143f86)
 
+### 1. Deserializer
+The Deserializer converts the incoming serial data into parallel data, making it accessible for further processing within the block.
+
+### 2. Edge Bit Counter
+The Edge Bit Counter is used to determine the sampling time at the mid-time of each bit, ensuring accurate data sampling.
+
+### 3. Data Sampling
+Data Sampling is responsible for the actual sampling of the received data, ensuring that the data is captured accurately.
+
+### 4. Parity Check
+The Parity Check component verifies the parity bit in the received frame, ensuring data integrity. If the parity bit does not match, a `PAR_ERR` signal is raised.
+
+### 5. Start Bit Check
+Start Bit Check verifies the start bit of the received frame to ensure that data reception begins correctly.
+
+### 6. Stop Bit Check
+Stop Bit Check ensures that the stop bit of the received frame is set to 1, indicating the end of data transmission. If the stop bit is incorrect, an `STP_ERR` signal is raised.
+
+### 7. Data Validation
+Data Validation checks that the received frame is error-free (no parity or stop bit errors) before forwarding the data to the `P_DATA` bus, accompanied by the `DATA_VLD` signal.
+
 ## [Testbench](./UART_RX_tb.v)
+
+![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/96a602f0-0e24-40df-8d85-d0f30d61d1f3)
+
+```
+# /*********************** Prescale Testcases *************************/
+# Prescale =  8: RX Period = 5ns & TX Period =  40ns [PASSED]
+# Prescale = 16: RX Period = 5ns & TX Period =  80ns [PASSED]
+# Prescale = 32: RX Period = 5ns & TX Period = 160ns [PASSED]
+# /*********************** Even Parity Testcases **********************/
+# MISMATCH: 00000000 ->      EVEN PARITY TESTCASE [PASSED]
+# MISMATCH: 00000000 ->      EVEN PARITY TESTCASE [PASSED]
+# MISMATCH: 00000000 ->      EVEN PARITY TESTCASE [PASSED]
+# /************************ Odd Parity Testcases **********************/
+# MISMATCH: 00000000 ->       ODD PARITY TESTCASE [PASSED]
+# MISMATCH: 00000000 ->       ODD PARITY TESTCASE [PASSED]
+# MISMATCH: 00000000 ->       ODD PARITY TESTCASE [PASSED]
+# /*********************** NO Parity Testcases ************************/
+# MISMATCH: 00000000 ->        NO PARITY TESTCASE [PASSED]
+# MISMATCH: 00000000 ->        NO PARITY TESTCASE [PASSED]
+# MISMATCH: 00000000 ->        NO PARITY TESTCASE [PASSED]
+# /******************** Gliches & Errors Testcases ********************/
+# MISMATCH: 00000000 ->     START GLITCH TESTCASE [PASSED]
+# MISMATCH: 00000000 ->   INCORRECT STOP TESTCASE [PASSED]
+# MISMATCH: 00000000 -> INCORRECT PARITY TESTCASE [PASSED]
+# /*********************** Two Successive Bytes ***********************/
+# MISMATCH: 0000000000000000 -> TWO SUCCESSIVE BYTES TESTCASE [PASSED]
+# /********************* Multiple Successive Bytes *********************/
+```
