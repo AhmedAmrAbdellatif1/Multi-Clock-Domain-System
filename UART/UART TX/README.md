@@ -59,7 +59,7 @@ The UART TX block is composed of four primary blocks, each serving a unique func
 
 ![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/f261060e-718b-4ba0-b429-9600d08de267)
 
-### 1. Serializer
+### 1. Serializer ([serializer.v](./serializer.v))
 The Serializer block is responsible for converting parallel data received on the `P_DATA` bus into a serial frame for transmission. It performs the task of serializing the data efficiently.
 
 ![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/534fdc9d-12ae-4b58-81b7-31c727dc5100)
