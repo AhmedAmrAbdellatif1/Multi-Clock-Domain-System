@@ -57,5 +57,31 @@ To effectively utilize the Register File block within our system, follow these s
 
 ## Testbench
 
+![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/da78748f-1381-44da-b3cf-c388d6be6760)
+
+```
+[PASSED]:  Write in Address 000
+[PASSED]:  Write in Address 001
+[PASSED]:  Write in Address 010
+[PASSED]:  Write in Address 011
+[PASSED]:  Write in Address 100
+[PASSED]:  Write in Address 101
+[PASSED]:  Write in Address 110
+[PASSED]:  Write in Address 111
+/******************** Reading Testcases **************************/
+[PASSED]: Read from Address 000
+[PASSED]: Read from Address 001
+[PASSED]: Read from Address 010
+[PASSED]: Read from Address 011
+[PASSED]: Read from Address 100
+[PASSED]: Read from Address 101
+[PASSED]: Read from Address 110
+[PASSED]: Read from Address 111
+/******************** Enables Testcases **************************/
+[PASSED]: Writing rejected when WrEn = 1 RdEn = 1
+[PASSED]: Reading rejected when WrEn = 1 RdEn = 1
+[PASSED]: Writing rejected when WrEn = 0 RdEn = 0
+[PASSED]: Reading rejected when WrEn = 0 RdEn = 0
+```
 
 
