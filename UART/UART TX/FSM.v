@@ -61,7 +61,8 @@ module FSM #( parameter WIDTH = 8 )
           next_state  = stop_bit;
       end
       stop_bit:   begin
-                  /*if(Data_Valid): This condition allows the UART TX to receive two successive bytes or more without returning to IDLE
+     // This condition allows the UART TX to receive two successive bytes or more without returning to IDLE    
+       /*if(Data_Valid):
           next_state  = start_bit;
         else*/
           next_state  = IDLE;
