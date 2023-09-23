@@ -29,7 +29,7 @@ The Register File block has the following interface:
 
 - **Outputs:**
   - `RdData`: Data output for read operations.
-  - 'RdData_Valid`: Status flag indicating that the data read from the register is valid.
+  - `RdData_Valid`: Status flag indicating that the data read from the register is valid.
   - `REG0`: The register contents at address 0x0, used by the system to store ALU Operand A
   - `REG1`: The register contents at address 0x1, used by the system to store ALU Operand B
   - `REG2`: The register contents at address 0x2, used by the system to store UART Config
