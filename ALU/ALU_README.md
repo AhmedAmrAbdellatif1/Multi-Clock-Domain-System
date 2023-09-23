@@ -27,33 +27,9 @@ The ALU block has the following interface:
 - **Outputs:**
   - `ALU OUT`: The 16-bits result of the operation.
   - `VALID`: Status flag to indicate that the ALU OUT is ready
+ 
+    ![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/a6ffe5d3-5075-43a7-8131-ca9e2a48fc57)
 
-## Usage
-To effectively utilize the ALU block within our mini-processor system, follow these steps:
+> For a better understanding of how the ALU block is implemented in RTL (Register-Transfer Level) code, please refer to the `alu.v` file in this repository.
 
-1. Ensure that the `OpCode` signal is correctly configured to select the desired operation (addition, subtraction, logical AND, etc.).
-
-2. Provide the input data operands (`DataA` and `DataB`) to the ALU.
-
-3. The result of the operation can be obtained from the `Result` output.
-
-4. Monitor the status flags in the `Flags` output to handle conditional branching or to determine the outcome of the operation.
-
-5. Properly synchronize the clocks and handle any potential hazards when interfacing with other blocks in the system due to multi-clock domain operation.
-
-## Example RTL Code
-For a better understanding of how the ALU block is implemented in RTL (Register-Transfer Level) code, please refer to the `alu.v` file in this repository.
-
-```verilog
-// Sample Verilog code illustrating the ALU functionality
-module alu (
-  input wire [3:0] OpCode,
-  input wire [31:0] DataA,
-  input wire [31:0] DataB,
-  output wire [31:0] Result,
-  output wire [3:0] Flags
-);
-  // Implementation details go here
-  // ...
-endmodule
 
