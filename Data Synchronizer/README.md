@@ -21,32 +21,21 @@ The Data Synchronizer block has the following interface:
   - `sync_bus`: The synchronized data bus, ensuring that data arrives reliably in the destination clock domain.
   - `enable_pulse`: Control signal indicating the synchronization process has occurred, enabling subsequent actions in the design.
 
-## Block Components
+## Elaborated Design
 The Data Synchronizer block comprises the following key components:
 
-- **Multi Flip-Flop Enable Synchronizer:** This component ensures that data is correctly synchronized across clock domains while minimizing metastability issues.
+### **Multi Flip-Flop Enable Synchronizer:** 
+This component ensures that data is correctly synchronized across clock domains while minimizing metastability issues.
 
-- **Pulse Generator Block:** Responsible for generating a pulse signal (`enable_pulse`) that signifies the successful synchronization of data.
+### **Pulse Generator Block:**
+Responsible for generating a pulse signal (`enable_pulse`) that signifies the successful synchronization of data.
 
-- **Multiplexer-Based Block:** This block facilitates the selection of the correct synchronized data, ensuring it aligns with the target clock domain.
+### **Multiplexer-Based Block:**
+This block facilitates the selection of the correct synchronized data, ensuring it aligns with the target clock domain.
 
 ## Synchronized MUX-Select Synchronization Scheme
 The Data Synchronizer employs a unique synchronization scheme that overcomes Clock Domain Crossing challenges. This scheme ensures data integrity and consistency between different clock domains, making it a crucial component in our design.
 
-## Example RTL Code
-For a deeper understanding of how the Data Synchronizer is implemented in RTL (Register-Transfer Level) code, please refer to the `data_synchronizer.v` file in this repository.
-
-```verilog
-// Sample Verilog code illustrating the Data Synchronizer functionality
-module data_synchronizer (
-  input wire [DATA_WIDTH-1:0] unsync_bus,
-  input wire bus_enable,
-  input wire CLK,
-  input wire RST,
-  output wire [DATA_WIDTH-1:0] sync_bus,
-  output wire enable_pulse
-);
-  // Implementation details go here
-  // ...
-endmodule
-
+## [Testbench](./UART_RX_tb.v)
+```
+```
