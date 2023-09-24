@@ -29,7 +29,7 @@ The UART TX block has the following interface:
   - `TX_OUT`: Serial data output signal for transmitting data. (high when idle)
   - `BUSY`: Output signal indicating ongoing transmission (high for transmission, low for idle).
 
-  > For a better understanding of how the ALU block is implemented in RTL (Register-Transfer Level) code, please refer to the [`UART_TX.v`](./UART_TX.v) file in this repository.
+> For a better understanding of how the ALU block is implemented in RTL (Register-Transfer Level) code, please refer to the [`UART_TX.v`](./UART_TX.v) file in this repository.
 
 ## Specifications
 To effectively use the UART TX block, consider the following specifications:
