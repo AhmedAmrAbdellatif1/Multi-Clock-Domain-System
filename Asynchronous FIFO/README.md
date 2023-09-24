@@ -51,7 +51,42 @@ The Asynchronous FIFO block operates according to the following specifications:
 ## Additional Information
 The design of this Asynchronous FIFO block is based on the principles outlined in Clifford E. Cummings' paper: "Simulation and Synthesis Techniques for Asynchronous FIFO Design."[^1]
 
-## Elaborated Design
+## The Block Diagram for FIFO
+
+![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/42ca8d2a-883f-4acc-bbaf-e7713042b7f1)
+
+To facilitate static timing analysis of the style #1 FIFO design, the design has been partitioned into the following six
+Verilog modules with the following functionality and clock domains:
+
+### 1. Wrapper Module ([ASYNC_FIFO.v](./ASYNC_FIFO.v))
+- This top-level wrapper module includes all clock domains and serves as a wrapper to instantiate other FIFO modules.
+- In a larger ASIC or FPGA design, this top-level wrapper may be discarded to group FIFO modules into their respective clock domains for improved synthesis and static timing analysis.
+
+### 2. FIFO Memory Buffer (FIFO_MEM_CNTRL.v) ([](./FIFO_MEM_CNTRL.v))
+- The FIFO memory buffer is accessed by both the write and read clock domains.
+- Typically, this buffer is implemented as a synchronous dual-port RAM, although other memory styles can be adapted for use as the FIFO buffer.
+
+### 3. Read-to-Write Synchronizer ([DF_SYNC.v](./DF_SYNC.v))
+- This module synchronizes the read pointer into the write-clock domain.
+- The synchronized read pointer is used by the `FIFO_WR` module to generate the FIFO full condition.
+- This module contains flip-flops synchronized to the write clock, without additional logic.
+
+### 4. Write-to-Read Synchronizer ([DF_SYNC.v](./DF_SYNC.v))
+- This module synchronizes the write pointer into the read-clock domain.
+- The synchronized write pointer is used by the `FIFO_RD` module to generate the FIFO empty condition.
+- Similar to `sync_r2w.v`, this module contains flip-flops synchronized to the read clock, without additional logic.
+
+### 5. Read Pointer and Empty-Flag Logic ([FIFO_RD.v](./FIFO_RD.v))
+- This module operates entirely within the read-clock domain.
+- It contains the FIFO read pointer and logic for generating the empty condition.
+
+### 6. Write Pointer and Full-Flag Logic ([FIFO_WR.v](./FIFO_WR.v))
+- This module operates entirely within the write-clock domain.
+- It contains the FIFO write pointer and logic for generating the full condition.
+
+### 7. Gray Code Converter ([GRAY_CONV.v](./GRAY_CONV.v))
+- The `GRAY_CONV.v` module is responsible for converting binary pointers into Gray encoded pointers.
+- Gray encoding is used to decrease synchronization errors when passing pointers between clock domains, ensuring reliable calculation of empty and full flags.
 
 ## [Testbench](./ASYNC_FIFO_tb.v)
 
