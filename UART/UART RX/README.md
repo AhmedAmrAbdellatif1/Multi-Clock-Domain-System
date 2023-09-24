@@ -35,7 +35,7 @@ The UART RX block has the following interface:
   - `o_stop_error`: Signal indicating a stop bit error in the received frame.
   - `o_parallel_data`: Output bus for the extracted data from the received frame.
   
-> For a better understanding of how the ALU block is implemented in RTL (Register-Transfer Level) code, please refer to the [`UART_RX.v`](./UART_RX.v) file in this repository.
+> For a better understanding of how the UART RX block is implemented in RTL (Register-Transfer Level) code, please refer to the [`UART_RX.v`](./UART_RX.v) file in this repository.
 
 ## Specifications
 To effectively use the UART RX block, consider the following specifications:
