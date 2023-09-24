@@ -15,7 +15,9 @@ The ALU block is responsible for the following key functions:
 - **Shift Operations** the ALU also supports shift operations. These operations allow for the movement of bits within data operands. These shift operations are valuable for tasks such as data manipulation and scaling within the processor.
 
 ## Block Interface
-The ALU block has the following interface:
+The ALU block has the following interface: 
+
+![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/ca19d944-33e8-4f8c-ac82-8a3f3bc50937)
 
 - **Inputs:**
   - `A` and `B`: Input 8-bits data operands for the selected operation.
@@ -27,8 +29,6 @@ The ALU block has the following interface:
 - **Outputs:**
   - `ALU OUT`: The 16-bits result of the operation.
   - `OUT_VALID`: Status flag to indicate that the `ALU OUT` is ready
- 
-![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/ca19d944-33e8-4f8c-ac82-8a3f3bc50937)
 
 > For a better understanding of how the ALU block is implemented in RTL (Register-Transfer Level) code, please refer to the [`ALU.v`](./ALU.v) file in this repository.
 
