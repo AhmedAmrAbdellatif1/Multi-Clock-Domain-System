@@ -62,7 +62,7 @@ Verilog modules with the following functionality and clock domains:
 - This top-level wrapper module includes all clock domains and serves as a wrapper to instantiate other FIFO modules.
 - In a larger ASIC or FPGA design, this top-level wrapper may be discarded to group FIFO modules into their respective clock domains for improved synthesis and static timing analysis.
 
-### 2. FIFO Memory Buffer (FIFO_MEM_CNTRL.v) ([](./FIFO_MEM_CNTRL.v))
+### 2. FIFO Memory Buffer ([FIFO_MEM_CNTRL.v](./FIFO_MEM_CNTRL.v))
 - The FIFO memory buffer is accessed by both the write and read clock domains.
 - Typically, this buffer is implemented as a synchronous dual-port RAM, although other memory styles can be adapted for use as the FIFO buffer.
 
