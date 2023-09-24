@@ -26,8 +26,7 @@ The Clock Divider block has the following interface:
 The Clock Divider block's primary function is to adjust the clock period based on the input divided ratio. This flexibility ensures that our digital system operates with the precise timing required for its various components.
 
 ## Expected Waveforms
-
-![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/d59e5943-36bd-4335-8283-ded552d0f39f)
+![Waveforms](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/df2735ca-cc07-4767-b32a-21634a2312f1)
 
 ## [Testbench](./ClkDiv_tb.v)
 ![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/ddf7df87-f36a-45f0-a0e7-d21a36a19b91)
