@@ -21,6 +21,8 @@ The Asynchronous FIFO block is characterized by the following key features:
 ## Block Interface
 The Asynchronous FIFO block has the following interface:
 
+![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/e078ff93-2b9c-413b-b1f8-999912ace48f)
+
 - **Inputs:**
   - `W_CLK`: Write clock signal.
   - `W_RST`: Asynchronous active-low write reset signal.
