@@ -21,7 +21,7 @@ The Data Synchronizer block has the following interface:
   - `sync_bus`: The synchronized data bus, ensuring that data arrives reliably in the destination clock domain.
   - `enable_pulse`: Control signal indicating the synchronization process has occurred, enabling subsequent actions in the design.
    
-> For a better understanding of how the ALU block is implemented in RTL (Register-Transfer Level) code, please refer to the [`DATA_SYNC.v`](.DATA_SYNC.v) file in this repository.
+> For a better understanding of how the Data Synchronizer block is implemented in RTL (Register-Transfer Level) code, please refer to the [`DATA_SYNC.v`](.DATA_SYNC.v) file in this repository.
 
 ## Elaborated Design
 The Data Synchronizer block comprises the following key components:
