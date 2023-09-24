@@ -5,7 +5,7 @@ module ASYNC_FIFO_tb ();
 /*******************************************************************/
 ///////////////////// TB Signals Declaration ////////////////////////
 /*******************************************************************/
-  parameter DATA_WIDTH    = 8   , MEM_in_DEPTH      = 40     ,   PTR_WIDTH = ($clog2(MEM_in_DEPTH)+1);
+  parameter DATA_WIDTH    = 8   , MEM_in_DEPTH      = 8     ,   PTR_WIDTH = ($clog2(MEM_in_DEPTH)+1);
   parameter W_CLK_PERIOD  = 10  ,	W_HALF_PERIOD  = 5      ;
   parameter R_CLK_PERIOD  = 25  ,	R_HALF_PERIOD  = 12.5   ;         
   parameter HIGH          = 1   ,	LOW            = 0      ;
