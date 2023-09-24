@@ -28,7 +28,7 @@ The ALU block has the following interface:
   - `ALU OUT`: The 16-bits result of the operation.
   - `OUT_VALID`: Status flag to indicate that the `ALU OUT` is ready
  
-   ![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/9f5846d1-5ce4-4cfc-ade5-65860bd7413b)
+![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/ca19d944-33e8-4f8c-ac82-8a3f3bc50937)
 
 > For a better understanding of how the ALU block is implemented in RTL (Register-Transfer Level) code, please refer to the [`ALU.v`](./ALU.v) file in this repository.
 
