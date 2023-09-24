@@ -9,7 +9,7 @@ In digital circuits, asynchronous reset signals can pose timing challenges durin
 ## Block Interface
 The Reset Synchronizer block has the following interface:
 
-![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/687077d1-a35c-40ab-9821-4c0257a53c7e)
+![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/76adf338-ba66-40f4-bc4a-9126835cfdbf)
 
 - **Inputs:**
   - `RST`: Asynchronous reset signal that requires synchronization.
