@@ -49,27 +49,9 @@ The Asynchronous FIFO block operates according to the following specifications:
 - Asynchronous reset signals `W_RST` and `R_RST` are used to clear the FIFO's state.
 
 ## Additional Information
-The design of this Asynchronous FIFO block is based on the principles outlined in Clifford E. Cummings' paper: "Simulation and Synthesis Techniques for Asynchronous FIFO Design.[^1]"
+The design of this Asynchronous FIFO block is based on the principles outlined in Clifford E. Cummings' paper: "Simulation and Synthesis Techniques for Asynchronous FIFO Design."[^1]
 
 ## Example RTL Code
 For a better understanding of how the Asynchronous FIFO block is implemented in RTL (Register-Transfer Level) code, please refer to the `async_fifo.v` file in this repository.
-
-```verilog
-// Sample Verilog code illustrating the Asynchronous FIFO functionality
-module async_fifo (
-  input wire W_CLK,
-  input wire W_RST,
-  input wire W_INC,
-  input wire R_CLK,
-  input wire R_RST,
-  input wire R_INC,
-  input wire [DATA_WIDTH-1:0] WR_DATA,
-  output wire FULL,
-  output wire [DATA_WIDTH-1:0] RD_DATA,
-  output wire EMPTY
-);
-  // Implementation details go here
-  // ...
-endmodule
 
 [^1]: https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjcscnm_MKBAxWpV6QEHcLyDzQQFnoECBoQAQ&url=http%3A%2F%2Fwww.sunburst-design.com%2Fpapers%2FCummingsSNUG2002SJ_FIFO1.pdf&usg=AOvVaw3-qzaucL9OsvhhA5RKZqaM&opi=89978449
