@@ -30,7 +30,7 @@ The Clock Divider block's primary function is to adjust the clock period based o
 ![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/d59e5943-36bd-4335-8283-ded552d0f39f)
 
 ## [Testbench](./ClkDiv_tb.v)
-![Uploading image.png…]()
+![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/ddf7df87-f36a-45f0-a0e7-d21a36a19b91)
 
 ```
 # [PASSED]: div ratio = 0, clock period = 10ns, div clock period = 10ns
