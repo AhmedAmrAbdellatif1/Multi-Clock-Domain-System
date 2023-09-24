@@ -126,10 +126,11 @@ always #HALF_PERIOD CLK = ~CLK;
 /**************************************************/
 /*************** DUT INSTANTIATION ****************/
 /**************************************************/
-ClkDiv DUT (  .i_ref_clk(CLK),
+ClkDiv #(.RATIO_WIDTH(RATIO_BIT)) DUT (  .i_ref_clk(CLK),
               .i_rst_n(RST),
               .i_clk_en(ENABLE),
               .i_div_ratio(DIV_RATIO),
               .o_div_clk(CLK_OUT)       );
 endmodule
+
 
