@@ -1,4 +1,4 @@
-module pulse_gen
+module D
   ( input   wire    CLK             ,
     input   wire    RST             ,
     input   wire    bus_enable      ,
