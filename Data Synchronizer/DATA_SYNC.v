@@ -17,7 +17,7 @@ module DATA_SYNC #( parameter BUS_WIDTH = 8, NUM_STAGES = 2)
     .SYNC    (x_sync_bus_enable)  ); 
     
     
-  pulse_gen U0_pulse_gen  (
+  DS_PULSE U0_DS_PULSE  (
     .CLK                  (dest_clk)             ,
     .RST                  (dest_rst)             ,
     .bus_enable           (x_sync_bus_enable) ,
