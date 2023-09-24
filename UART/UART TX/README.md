@@ -15,6 +15,8 @@ The UART TX block performs the following key functions:
 ## Block Interface
 The UART TX block has the following interface:
 
+![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/8614ac50-6430-41bc-9b1b-9562b4de9f8e)
+
 - **Inputs:**
   - `CLK`: Clock signal for sequential elements.
   - `RST`: Active-low asynchronous reset signal to clear registers.
@@ -26,9 +28,7 @@ The UART TX block has the following interface:
 - **Outputs:**
   - `TX_OUT`: Serial data output signal for transmitting data. (high when idle)
   - `BUSY`: Output signal indicating ongoing transmission (high for transmission, low for idle).
- 
-  ![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/1e7ec8b2-6e8f-424b-a108-216299c3555c)
- 
+
   > For a better understanding of how the ALU block is implemented in RTL (Register-Transfer Level) code, please refer to the [`UART_TX.v`](./UART_TX.v) file in this repository.
 
 ## Specifications
