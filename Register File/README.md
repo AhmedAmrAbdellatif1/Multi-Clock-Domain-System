@@ -34,8 +34,7 @@ The Register File block has the following interface:
   - `REG1`: The register contents at address 0x1, used by the system to store ALU Operand B
   - `REG2`: The register contents at address 0x2, used by the system to store UART Config
   - `REG3`: The register contents at address 0x3, used by the system to store Div Ratio
- 
-![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/1d9b73d0-7240-4240-8ee6-dae9b3481f86)
+  - ![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/8275474a-81cd-4500-9c0d-9f0c7aa4be64)
 
   > For a better understanding of how the Rgister File block is implemented in RTL (Register-Transfer Level) code, please refer to the [`RegFile.v`](./RegFile.v) file in this repository.
 
