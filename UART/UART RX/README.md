@@ -19,6 +19,8 @@ The UART RX block serves several essential functions:
 ## Block Interface
 The UART RX block has the following interface:
 
+![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/ebbaaca8-8b95-4411-8e09-5472c0408fc7)
+
 - **Inputs:**
   - `i_clk`: Clock signal for sequential elements.
   - `i_rst_n`: Active-low asynchronous reset signal to clear registers.
@@ -33,8 +35,6 @@ The UART RX block has the following interface:
   - `o_stop_error`: Signal indicating a stop bit error in the received frame.
   - `o_parallel_data`: Output bus for the extracted data from the received frame.
   
- ![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/81dea622-5264-48af-b763-43da86bb2410)
-
 > For a better understanding of how the ALU block is implemented in RTL (Register-Transfer Level) code, please refer to the [`UART_RX.v`](./UART_RX.v) file in this repository.
 
 ## Specifications
