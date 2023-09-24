@@ -37,7 +37,7 @@ The Register File block has the following interface:
   - `REG2`: The register contents at address 0x2, used by the system to store UART Config
   - `REG3`: The register contents at address 0x3, used by the system to store Div Ratio
 
-  > For a better understanding of how the Rgister File block is implemented in RTL (Register-Transfer Level) code, please refer to the [`RegFile.v`](./RegFile.v) file in this repository.
+> For a better understanding of how the Rgister File block is implemented in RTL (Register-Transfer Level) code, please refer to the [`RegFile.v`](./RegFile.v) file in this repository.
 
 
 ## Usage
