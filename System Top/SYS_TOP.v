@@ -19,13 +19,13 @@ module SYS_TOP #( parameter MEM_DEPTH       = 8   ,     // RegFile and FIFO dept
     input   wire    i_uart_clk  		  ,     // UART clock signal
     input   wire    i_rst_n     		  ,     // Asynchronous active-low reset signal
     input   wire    i_rx_in     		  ,     // input serial data
-    output  wire    o_parity_err    ,     // parity bit error
-    output  wire    o_stop_err     	,     // stop bit error
-    output  wire    o_tx_out    	 	 );    // output serial data
-  
+    output  wire    o_parity_err      ,     // parity bit error
+    output  wire    o_stop_err     	  ,     // stop bit error
+    output  wire    o_tx_out    	 	  );    // output serial data
+
 /******************************************* Internal Signal Declaration *******************************************/
 /********* UART RX OUTPUT SIGNALS *********/
-  wire                    x_URX_VLD   	   ;   // Out Data Valid             : connected to DATA_SYNC
+  wire                    x_URX_VLD   	  ;   // Out Data Valid             : connected to DATA_SYNC
   wire  [BUS_WIDTH-1:0]   x_URX_OUT       ;   // Parallel Out Data Bus      : connected to DATA_SYNC
   
 /******** DATA _SYNC OUTPUT SIGNALS *******/
@@ -43,11 +43,11 @@ module SYS_TOP #( parameter MEM_DEPTH       = 8   ,     // RegFile and FIFO dept
   wire  [BUS_WIDTH-1:0]   x_UTX_data      ;   // Parallel Data Bus          : connected to UART_TX
   wire                    x_UTX_VLD       ;   // Parallel Data Valid        : connected to UART_TX
   wire                    x_CD_en         ;   // Clock Divider Enable       : connected to ClkDiv
-  wire  [BUS_WIDTH-3:0]   x_CD_RX					    ; 	 // Clock Divider RX ratio			  : connected to ClkDiv
+  wire  [BUS_WIDTH-3:0]   x_CD_RX					; 	 // Clock Divider RX ratio		: connected to ClkDiv
 	
 /*********** ALU OUTPUT SIGNALS ***********/
   wire  [ALU_WIDTH-1:0]   x_ALU_out       ;   // ALU Result                 : connected to SYS_CTRL
-  wire                    x_ALU_vld    		 ;   // Result Valid               : connected to SYS_CTRL
+  wire                    x_ALU_vld    		;   // Result Valid               : connected to SYS_CTRL
 
 /********* RegFile OUTPUT SIGNALS *********/
   wire  [BUS_WIDTH-1:0]   x_Reg_RdData    ;   // Read Data Bus              : connected to SYS_CTRL
@@ -93,7 +93,7 @@ module SYS_TOP #( parameter MEM_DEPTH       = 8   ,     // RegFile and FIFO dept
     .i_serial_data      ( i_rx_in )         ,    
     .i_parity_enable    ( x_Reg_REG2[0] )   ,
     .i_parity_type      ( x_Reg_REG2[1] )   ,
-		.o_parity_error			  ( o_parity_err )    ,
+		.o_parity_error			  ( o_parity_err )  ,
 		.o_stop_error       ( o_stop_err )      ,
     .o_data_valid       ( x_URX_VLD )       ,
     .o_parallel_data    ( x_URX_OUT )       );
@@ -118,27 +118,27 @@ module SYS_TOP #( parameter MEM_DEPTH       = 8   ,     // RegFile and FIFO dept
     .DATA_BUS_WIDTH ( BUS_WIDTH ) 
     
   )   U0_SYS_CTRL   (
-    .CLK          ( i_ref_clk )     ,
-    .RST          ( x_RST_SYNC1 )   ,
-    .ALU_OUT      ( x_ALU_out )     ,
-    .OUT_Valid    ( x_ALU_vld )     ,
-    .RX_P_Data    ( x_DS_OUT )      ,
-    .RX_D_VLD     ( x_DS_pulse )    ,
-    .RdData       ( x_Reg_RdData )  ,
-    .RdData_Valid ( x_Reg_RdVld )   ,
-		.Prescale_RX  ( x_Reg_REG2[7:2]),
-		.ClkDiv_RX 		 ( x_CD_RX )				   ,
+    .CLK          ( i_ref_clk )       ,
+    .RST          ( x_RST_SYNC1 )     ,
+    .ALU_OUT      ( x_ALU_out )       ,
+    .OUT_Valid    ( x_ALU_vld )       ,
+    .RX_P_Data    ( x_DS_OUT )        ,
+    .RX_D_VLD     ( x_DS_pulse )      ,
+    .RdData       ( x_Reg_RdData )    ,
+    .RdData_Valid ( x_Reg_RdVld )     ,
+		.Prescale_RX  ( x_Reg_REG2[7:2])  ,
+		.ClkDiv_RX 		 ( x_CD_RX )				,
 		.FIFO_FULL		  ( x_FIFO_FULL )   ,
-    .ALU_EN       ( x_ALU_en )      ,
-    .ALU_FUN      ( x_ALU_fun )     ,
-    .CLK_EN       ( x_CG_en )       ,
-    .Address      ( x_Reg_addr )    ,
-    .WrEn         ( x_Reg_WrEn )    ,
-    .RdEn         ( x_Reg_RdEn )    ,
-    .WrData       ( x_Reg_WrData )  ,
-    .TX_P_Data    ( x_UTX_data )    ,
-    .TX_D_VLD     ( x_UTX_VLD )     ,
-    .clk_div_en   ( x_CD_en )       );
+    .ALU_EN       ( x_ALU_en )        ,
+    .ALU_FUN      ( x_ALU_fun )       ,
+    .CLK_EN       ( x_CG_en )         ,
+    .Address      ( x_Reg_addr )      ,
+    .WrEn         ( x_Reg_WrEn )      ,
+    .RdEn         ( x_Reg_RdEn )      ,
+    .WrData       ( x_Reg_WrData )    ,
+    .TX_P_Data    ( x_UTX_data )      ,
+    .TX_D_VLD     ( x_UTX_VLD )       ,
+    .clk_div_en   ( x_CD_en )         );
     
 /*********** ALU instantiation ************/ 
   ALU  #(
@@ -188,65 +188,65 @@ module SYS_TOP #( parameter MEM_DEPTH       = 8   ,     // RegFile and FIFO dept
 		
 	)	U0_ASYNC_FIFO	(
 		.i_Wclk			  ( i_ref_clk )           ,
-		.i_Wrst_n		 ( x_RST_SYNC1 )    	    ,
+		.i_Wrst_n		  ( x_RST_SYNC1 )    	    ,
 		.i_Winc			  ( x_UTX_VLD )           ,
 		.i_Rclk			  ( x_UTX_CLK )           ,
-		.i_Rrst_n		 ( x_RST_SYNC2 )    	    ,
+		.i_Rrst_n		  ( x_RST_SYNC2 )    	    ,
 		.i_Rinc			  ( x_PG_pulse )          ,
 		.i_Wdata		  ( x_UTX_data )     	    ,
 		.o_full			  ( x_FIFO_FULL )         ,
 		.o_Rdata		  ( x_FIFO_RData )     	  ,
-		.o_empty		  ( x_FIFO_EMPTY  )     	 );
+		.o_empty		  ( x_FIFO_EMPTY  )     	);
 		
 /********* RST SYNC instantiation **********/
 	RST_SYNC U0_RST_SYNC (
-		.CLK 			    ( i_ref_clk )			  ,
-		.RST 			    ( i_rst_n )				   ,
+		.CLK 			  ( i_ref_clk )			 ,
+		.RST 			  ( i_rst_n )				 ,
 		.SYNC_RST   ( x_RST_SYNC1 ) 	 );
 
 	RST_SYNC U1_RST_SYNC (
-		.CLK 			    ( i_uart_clk )		  ,
-		.RST 			    ( i_rst_n )				   ,  
+		.CLK 			  ( i_uart_clk )		 ,
+		.RST 			  ( i_rst_n )				 ,  
 		.SYNC_RST   ( x_RST_SYNC2 ) 	 );
 		
 /********** CLK DIV instantiation **********/
 	ClkDiv #(.RATIO_WIDTH ( BUS_WIDTH-2 ))  U0_ClkDiv	( 
-		.i_ref_clk 		 ( i_uart_clk )     	,
-		.i_rst_n 			  ( x_RST_SYNC2 )     ,
-		.i_clk_en 		  ( x_CD_en )      		 ,
-		.i_div_ratio 	( x_CD_RX )   			   ,
-		.o_div_clk 		 ( x_URX_CLK )     	 );
+		.i_ref_clk 		( i_uart_clk )     	,
+		.i_rst_n 			( x_RST_SYNC2 )     ,
+		.i_clk_en 		( x_CD_en )      		,
+		.i_div_ratio 	( x_CD_RX )   			,
+		.o_div_clk 		( x_URX_CLK )     	);
 
 	ClkDiv U1_ClkDiv	( 
-		.i_ref_clk 		 ( i_uart_clk )     	,
-		.i_rst_n 			  ( x_RST_SYNC2 )    	,
-		.i_clk_en 		  ( x_CD_en )      		 ,
-		.i_div_ratio 	( x_Reg_REG3 )   		 ,
-		.o_div_clk 		 ( x_UTX_CLK )     	 );
+		.i_ref_clk 		( i_uart_clk )     	,
+		.i_rst_n 		  ( x_RST_SYNC2 )    	,
+		.i_clk_en 		( x_CD_en )      		,
+		.i_div_ratio 	( x_Reg_REG3 )   		,
+		.o_div_clk 		( x_UTX_CLK )     	);
 
 /********* Pulse Gen instantiation *********/    
     PULSE_GEN  U0_PULSE_GEN (
-			.CLK				    ( x_UTX_CLK )   	   ,   
-      .RST				    ( x_RST_SYNC2 )  	  ,  
-      .LVL_SIG		  ( x_UTX_busy )   	  ,  
-      .PULSE_SIG	 ( x_PG_pulse ) 		   ); 
+			.CLK				 ( x_UTX_CLK )   	   ,   
+      .RST				 ( x_RST_SYNC2 )  	 ,  
+      .LVL_SIG		 ( x_UTX_busy )   	 ,  
+      .PULSE_SIG	 ( x_PG_pulse ) 		 ; 
   
 /********* UART TX instantiation *********/
 		UART_TX	U0_UART_TX (
-			.CLK				     ( x_UTX_CLK )			      ,
-			.RST				     ( x_RST_SYNC2 )	 	    ,
-			.P_DATA			   ( x_FIFO_RData )	     ,
-			.DATA_VALID	 ( !x_FIFO_EMPTY )	    ,
-			.PAR_EN			   ( x_Reg_REG2[0] )	    ,
-			.PAR_TYP		   ( x_Reg_REG2[1] )	    ,
-			.TX_OUT			   ( o_tx_out )			       ,
-			.Busy 			    ( x_UTX_busy )        );
+			.CLK				 ( x_UTX_CLK )			   ,
+			.RST				 ( x_RST_SYNC2 )	 	   ,
+			.P_DATA			 ( x_FIFO_RData )	     ,
+			.DATA_VALID	 ( !x_FIFO_EMPTY )	   ,
+			.PAR_EN			 ( x_Reg_REG2[0] )	   ,
+			.PAR_TYP		 ( x_Reg_REG2[1] )	   ,
+			.TX_OUT			 ( o_tx_out )			     ,
+			.Busy 			 ( x_UTX_busy )        );
 			
 /********* Clk Gate instantiation ********/
 		ClkGate	U0_ClkGate	(
-			.CLK 				    ( i_ref_clk )			  ,
-			.CLK_EN 		   ( x_CG_en )				   ,
-			.GATED_CLK 	 ( x_CG_ALUclk )   );
+			.CLK 				 ( i_ref_clk )			,
+			.CLK_EN 		 ( x_CG_en )			  ,
+			.GATED_CLK 	 ( x_CG_ALUclk )    );
   
 endmodule
 
