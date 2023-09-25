@@ -60,8 +60,7 @@ As mentioned earlier, a [Data Synchronizer](https://github.com/AhmedAmrAbdellati
 
 Furthermore, to mitigate metastability issues during the de-assertion of the reset signal, we have incorporated two [Reset Synchronizers](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/tree/24d94171fbf92b36649f055d8c104d8afbe419e2/Reset%20Synchronizer). Each of these synchronizers is integrated into its respective clock domain group, ensuring that reset signals are effectively synchronized across the system.
 
-### Clock dividers
-to 
+To accommodate various configurations for UART sampling, we connect the highest required frequency to the i_uart_clk port. Subsequently, we utilize a [clock divider](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/tree/54e8705dad16caf8acdef827c448cbae46984f52/Clock%20Divider) to generate both the UART RX Clock and the UART TX Clock
 
 ## System Architecture
 
