@@ -72,5 +72,7 @@ Following DFT insertion, formal verification is once again applied to the modifi
 ## Physical Design and Place-and-Route (PnR)
 In the Physical Design phase, the logical design is translated into a physical layout. This involves defining the exact locations and sizes of transistors, interconnections, and metal layers on the silicon wafer. The Place-and-Route (PnR) tool plays a crucial role in determining the optimal placement of components and routing of connections to meet performance, power, and area constraints.
 
+![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/52642dbb-2578-4752-8659-6e1cdb923e48)
+
 ![PnR](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/527d96c1-464e-4f4a-9350-50533389b6a2)
 
