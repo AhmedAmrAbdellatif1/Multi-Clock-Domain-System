@@ -4,7 +4,7 @@ This document provides an overview of the Application-Specific Integrated Circui
 ## RTL Design
 The RTL (Register-Transfer Level) design phase is the starting point for ASIC development. During this phase, the system's functionality is described using hardware description languages (HDLs) like Verilog or VHDL. Designers create high-level representations of digital logic, specifying the interconnections and operations of various components within the ASIC.
 
-### [SYS_TOP](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/blob/e372c26c84a87c1082fa384b7910256214bcdd2b/SYS_TOP.v)) Simulation Result
+### [SYS_TOP](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/blob/e372c26c84a87c1082fa384b7910256214bcdd2b/SYS_TOP.v) Simulation Result
 ![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/483872b1-8df3-444a-9c0b-e4492cf6961b)
 ![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/239aa19b-8427-4012-a0eb-947abbc0a26c)
 
