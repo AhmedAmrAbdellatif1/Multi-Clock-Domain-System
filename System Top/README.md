@@ -47,14 +47,15 @@ The RTL (Register-Transfer Level) design phase is the starting point for ASIC de
 
 ## [Synthesis](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/tree/523d0aed7bb8a34674a57778fa5e1acd2a9f78f2/System%20Top/Synthesis)
 Once the RTL design is complete, synthesis is the next crucial step. In this phase, the RTL code is transformed into a gate-level netlist. The synthesis tool maps the RTL description onto specific target libraries, optimizing for factors like area, power, and speed. The result is a gate-level representation of the design, which can be further optimized.
+
 ![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/f785937b-2dbe-46fe-916f-efcdfd1c4a6b)
 
-3. Post-Synthesis Formal Verification
+## Post-Synthesis Formal Verification
 After synthesis, formal verification techniques are employed to ensure that the gate-level netlist accurately reflects the original RTL design. Formal methods, such as model checking and equivalence checking, are used to mathematically verify that the design behaves as intended. This phase helps identify and rectify any discrepancies introduced during synthesis.
 
-4. DFT Insertion
+## DFT Insertion
 Design for Testability (DFT) is a critical phase in ASIC development, aimed at ensuring efficient testing of the final chip. During DFT insertion, various test structures, such as scan chains and boundary scan cells, are added to the design. These structures enable comprehensive testing of the ASIC's functionality and help diagnose and debug any faults.
 
-5. Post-DFT Formal Verification
+## Post-DFT Formal Verification
 Following DFT insertion, formal verification is once again applied to the modified design. This phase ensures that the test structures and DFT logic are correctly integrated into the ASIC and that they do not introduce any unintended behavior. Formal methods play a crucial role in confirming that the DFT enhancements do not compromise the design's integrity.
 
