@@ -56,8 +56,12 @@ After synthesis, formal verification techniques are employed to ensure that the 
 ![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/24e354db-672d-436b-8089-4b713ce81eb9)
 
 ## [DFT Insertion](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/tree/bbccaeeca005c569c398ab85718bef4f8792171a/System%20Top/DFT)
+
 Design for Testability (DFT) is a critical phase in ASIC development, aimed at ensuring efficient testing of the final chip. During DFT insertion, various test structures, such as scan chains and boundary scan cells, are added to the design. These structures enable comprehensive testing of the ASIC's functionality and help diagnose and debug any faults.
 
+![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/3d1456b6-1ae7-4273-8c3a-dbb44bf4f703)
+
 ## [Post-DFT Formal Verification](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/tree/bbccaeeca005c569c398ab85718bef4f8792171a/System%20Top/Formal%20Verification%20(POST-DFT))
+
 Following DFT insertion, formal verification is once again applied to the modified design. This phase ensures that the test structures and DFT logic are correctly integrated into the ASIC and that they do not introduce any unintended behavior. Formal methods play a crucial role in confirming that the DFT enhancements do not compromise the design's integrity.
 
