@@ -56,9 +56,9 @@ After synchronization, the data enters the System Controller, which determines t
 *These well-defined steps ensure efficient data management and processing within the Low Power Configurable Multi-Clock Digital System, even when dealing with disparate clock frequencies and multiple operations.*
 
 ### To address the presence of multiple clock domains within the system, we have implemented synchronizers.
-As mentioned earlier, a ([Data Synchronizer](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/tree/405196392bf892d5c6059fc183e1ec9a1a9db0ec/Data%20Synchronizer)) is introduced after the UART RX stage. This addition is essential to prevent the occurrence of metastability in the output byte from the UART RX when it interfaces with the SYS CTRL block.
+As mentioned earlier, a [Data Synchronizer](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/tree/405196392bf892d5c6059fc183e1ec9a1a9db0ec/Data%20Synchronizer) is introduced after the UART RX stage. This addition is essential to prevent the occurrence of metastability in the output byte from the UART RX when it interfaces with the SYS CTRL block.
 
-Furthermore, to mitigate metastability issues during the de-assertion of the reset signal, we have incorporated two Reset Synchronizers. Each of these synchronizers is integrated into its respective clock domain group, ensuring that reset signals are effectively synchronized across the system.
+Furthermore, to mitigate metastability issues during the de-assertion of the reset signal, we have incorporated two [Reset Synchronizers](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/tree/24d94171fbf92b36649f055d8c104d8afbe419e2/Reset%20Synchronizer). Each of these synchronizers is integrated into its respective clock domain group, ensuring that reset signals are effectively synchronized across the system.
 
 ### Clock dividers
 to 
