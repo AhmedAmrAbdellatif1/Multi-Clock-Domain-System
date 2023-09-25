@@ -1,4 +1,4 @@
-# ASIC Flow Overview
+![1695561081105](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/c64e46ae-b400-4dec-992a-58619eb47965)# ASIC Flow Overview
 This document provides an overview of the Application-Specific Integrated Circuit (ASIC) design flow, outlining the key phases from RTL design to DFT insertion. Each phase contributes to the successful creation of a custom digital integrated circuit.
 
 ## RTL Design
@@ -64,4 +64,11 @@ Design for Testability (DFT) is a critical phase in ASIC development, aimed at e
 ## [Post-DFT Formal Verification](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/tree/bbccaeeca005c569c398ab85718bef4f8792171a/System%20Top/Formal%20Verification%20(POST-DFT))
 
 Following DFT insertion, formal verification is once again applied to the modified design. This phase ensures that the test structures and DFT logic are correctly integrated into the ASIC and that they do not introduce any unintended behavior. Formal methods play a crucial role in confirming that the DFT enhancements do not compromise the design's integrity.
+
+![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/4546e26e-a7bb-4861-9167-1683401d9534)
+
+## Physical Design and Place-and-Route (PnR)
+In the Physical Design phase, the logical design is translated into a physical layout. This involves defining the exact locations and sizes of transistors, interconnections, and metal layers on the silicon wafer. The Place-and-Route (PnR) tool plays a crucial role in determining the optimal placement of components and routing of connections to meet performance, power, and area constraints.
+
+![PnR](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/527d96c1-464e-4f4a-9350-50533389b6a2)
 
