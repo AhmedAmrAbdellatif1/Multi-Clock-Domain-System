@@ -1,10 +1,10 @@
-# Clock Divider (Frequency Multiplier) Block
+# Clock Divider (Frequency Divider) Block
 
 ## Overview
-The Clock Divider (Frequency Multiplier) block is a vital component within our Low Power Configurable Multi-Clock Digital System. Its purpose is to take an input clock signal of a certain frequency and generate an output clock signal with a different frequency, achieving frequency multiplication as needed.
+The Clock Divider (Frequency Divider) block is a vital component within our Low Power Configurable Multi-Clock Digital System. Its purpose is to take an input clock signal of a certain frequency and generate an output clock signal with a different frequency, achieving frequency division as needed.
 
 ## Block Description
-In digital systems, managing clock frequencies is crucial for proper operation. The Clock Divider block provides the capability to multiply the input clock frequency to match the specific requirements of our digital design.
+In digital systems, managing clock frequencies is crucial for proper operation. The Clock Divider block provides the capability to divide the input clock frequency to match the specific requirements of our digital design.
 
 ## Block Interface
 The Clock Divider block has the following interface:
