@@ -36,7 +36,7 @@ The workflow of the System Controller is as follows:
 
 ## Block Interface
 
-![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/0db4d45d-85cf-496c-ba73-9b877d364de6)
+![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/52fd0d94-32a6-4a23-ad48-1a7345c30097)
 > Not all the ports are included in the photo
 
 ### Inputs
