@@ -74,5 +74,6 @@ In the Physical Design phase, the logical design is translated into a physical l
 
 ![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/52642dbb-2578-4752-8659-6e1cdb923e48)
 
-![PnR](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/527d96c1-464e-4f4a-9350-50533389b6a2)
+![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/a95fc600-16e8-4180-bece-a7766279dc10)
+
 
