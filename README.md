@@ -66,6 +66,8 @@ To accommodate various configurations for UART sampling, we connect the highest 
 
 This system consists of ten distinct blocks, each contributing to its overall functionality. Let's delve into these blocks:
 
+![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/f9f76758-d168-41a6-8cc1-5713a302ed29)
+
 ### Clock Domain 1 (REF_CLK)
 
 #### 1. RegFile (Register File)
