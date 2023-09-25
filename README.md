@@ -1,16 +1,67 @@
 # RTL to GDS Implementation of Low Power Configurable Multi Clock Digital System
-Design of Multi Clock Domain System using Verilog HDL from RTL Design to Implementation.
 
-It is responsible of receiving commands through UART receiver to do different system functions as register file reading/writing or doing some processing using ALU block and send result using 4 bytes frame through UART transmitter communication protocol
-# Low Power Configurable Multi-Clock Digital System
-
-## Overview
-
-Welcome to the comprehensive readme of the Low Power Configurable Multi-Clock Digital System. This document provides an in-depth understanding of the system, its architecture, and functionality, from RTL (Register-Transfer Level) design to GDS (Graphic Design System) implementation.
+It is responsible of receiving commands through UART receiver to do different system functions as register file reading/writing or doing some processing using ALU block and send result using up to 4 bytes frame through UART transmitter communication protocol
 
 ## Introduction
 
 The Low Power Configurable Multi-Clock Digital System is a sophisticated digital design realized in Verilog HDL. It serves as a versatile platform, receiving commands through a UART (Universal Asynchronous Receiver-Transmitter) receiver. It executes a wide range of system functions, including register file operations and complex computations via the ALU (Arithmetic Logic Unit) block. Subsequently, the system transmits results using a 4-byte frame through UART communication.
+
+## Overview
+### The system receives a UART Frame from the UART RX block, the first frame determines the needed command, the system offers 4 different operations:
+1. Register File Write command
+2. Register File Read command
+3. ALU Operation command with operand
+4. ALU Operation command with No operand
+  
+**The UART RX parallel data undergoes synchronization before being sent to the System Controller due to the discrepancy in clock domains.**
+**The System Controller operates on a 50 MHz REF CLK, while the UART RX functions on a 3.6864 MHz clock.**
+ **Synchronizing the data is crucial in ensuring its integrity during transfer.**
+
+After synchronization, the data enters the System Controller, which determines the required operation and configures the necessary control signals. Here's how the System Controller manages different tasks:
+
+1. Register File Write Operation (0xAA):
+   
+   -It enables the `WrEn` signal of the Register File, indicating a write operation.
+   
+   -The desired `Address` for writing is specified.
+  
+2. Register File Read Operation (0xBB):
+
+   -It enables the `RdEn` signal of the Register File, indicating a read operation.
+
+   -The desired `Address` for reading is specified.
+
+   -The data is retrieved from the Register File and sent to the UART TX.
+
+> **However, the UART TX operates on a different clock frequency, specifically 115.2 KHz. To prevent data loss due to clock domain crossing (CDC), a `FIFO` (First-In-First-Out) buffer is strategically placed just before the UART TX. This buffer ensures the orderly transmission of data without loss or corruption.**
+
+3. ALU (Arithmetic Logic Unit) Operation (0xCC):
+
+   -It activates the `ALU_EN` signal of the ALU, signaling the start of an ALU operation.
+
+   -The `CLK GATE` is enabled to activate the `ALU CLK`, synchronizing it with the ALU operation.
+
+   -The operands required for the operation are obtained from the Register File at the predefined addresses.
+
+   -The desired function for the ALU operation is conveyed using the `ALU_FUN` signal.
+
+   -The result of the ALU operation (`ALU_OUT`) is passed to the System Controller.
+
+   -From there, it is sent to the FIFO for subsequent transmission to the UART TX and, ultimately, to the master.
+
+4. ALU Operation without Operand Change (0xDD): 
+
+   -This configuration allows the ALU to perform an operation without altering the operands previously defined in the Register File.
+
+*These well-defined steps ensure efficient data management and processing within the Low Power Configurable Multi-Clock Digital System, even when dealing with disparate clock frequencies and multiple operations.*
+
+### To address the presence of multiple clock domains within the system, we have implemented synchronizers.
+As mentioned earlier, a ([Data Synchronizer](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/tree/405196392bf892d5c6059fc183e1ec9a1a9db0ec/Data%20Synchronizer)) is introduced after the UART RX stage. This addition is essential to prevent the occurrence of metastability in the output byte from the UART RX when it interfaces with the SYS CTRL block.
+
+Furthermore, to mitigate metastability issues during the de-assertion of the reset signal, we have incorporated two Reset Synchronizers. Each of these synchronizers is integrated into its respective clock domain group, ensuring that reset signals are effectively synchronized across the system.
+
+### Clock dividers
+to 
 
 ## System Architecture
 
@@ -94,6 +145,3 @@ The system's operation is driven by commands received via UART_RX. It supports a
 
 This system represents a remarkable achievement in digital design, combining versatility, efficiency, and precise control over multi-clock domains. Its wide range of supported operations makes it a valuable asset in various applications.
 
-For detailed design files and implementation, please refer to the repository linked below.
-
-[GitHub Repository]([repository-link](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/tree/f0ffc176a911d5b889440c45f0cda5d3c369ddea/System%20Top))
