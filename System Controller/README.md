@@ -34,5 +34,58 @@ The workflow of the System Controller is as follows:
 3. The System Controller processes the commands, performing the requested operations using the ALU and Register File.
 4. Once the operation is completed, the System Controller sends the result back to the master through UART_TX.
 
+## Block Interface
+## Inputs
+
+The System Controller block receives the following inputs:
+
+- **Clock and Reset Signals:**
+  - `CLK`: The Clock Signal.
+  - `RST`: Active Low Reset.
+
+- **ALU Inputs:**
+  - `ALU_OUT`: ALU Result Bus (Width: ALU_WIDTH).
+  - `OUT_Valid`: ALU Result Valid Signal.
+
+- **UART_RX Inputs:**
+  - `RX_P_Data`: UART_RX Data Bus (Width: DATA_BUS_WIDTH).
+  - `RX_D_VLD`: RX Data Valid Signal.
+
+- **Register File Inputs:**
+  - `RdData`: Read Data Bus (Width: DATA_BUS_WIDTH).
+  - `RdData_Valid`: Read Data Valid Signal.
+
+- **Clock Divider and Prescale Configuration:**
+  - `Prescale_RX`: Configuration for Prescale Values (Width: DATA_BUS_WIDTH-3).
+  - `FIFO_FULL`: FIFO Full Flag Signal.
+
+- **ALU Control Signals:**
+  - `ALU_EN`: ALU Enable Signal.
+  - `ALU_FUN`: ALU Function Signal (Width: ALUFN_WIDTH).
+
+- **Clock Management:**
+  - `CLK_EN`: Clock Gate Enable Signal.
+
+- **Address and Memory Access:**
+  - `Address`: Address Bus (Width: ADDR_WIDTH).
+  - `WrEn`: Write Enable Signal.
+  - `RdEn`: Read Enable Signal.
+
+## Outputs
+
+The System Controller block provides the following outputs:
+
+- **Data Transfer:**
+  - `WrData`: Write Data Bus (Width: DATA_BUS_WIDTH).
+  - `TX_P_Data`: UART_TX Data Bus (Width: DATA_BUS_WIDTH).
+  - `TX_D_VLD`: TX Data Valid Signal.
+
+- **Clock Divider Control:**
+  - `clk_div_en`: Clock Divider Enable Signal.
+
+- **Clock Divider Output:**
+  - `ClkDiv_RX`: Clock Divider Ratio for RX (Width: DATA_BUS_WIDTH-3).
+
+
 ![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/0db4d45d-85cf-496c-ba73-9b877d364de6)
 
