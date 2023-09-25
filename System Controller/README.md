@@ -35,9 +35,10 @@ The workflow of the System Controller is as follows:
 4. Once the operation is completed, the System Controller sends the result back to the master through UART_TX.
 
 ## Block Interface
-## Inputs
 
 ![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/0db4d45d-85cf-496c-ba73-9b877d364de6)
+
+### Inputs
 
 The System Controller block receives the following inputs:
 
@@ -73,7 +74,7 @@ The System Controller block receives the following inputs:
   - `WrEn`: Write Enable Signal.
   - `RdEn`: Read Enable Signal.
 
-## Outputs
+### Outputs
 
 The System Controller block provides the following outputs:
 
