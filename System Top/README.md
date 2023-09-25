@@ -1,4 +1,4 @@
-![1695561081105](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/c64e46ae-b400-4dec-992a-58619eb47965)# ASIC Flow Overview
+# ASIC Flow Overview
 This document provides an overview of the Application-Specific Integrated Circuit (ASIC) design flow, outlining the key phases from RTL design to DFT insertion. Each phase contributes to the successful creation of a custom digital integrated circuit.
 
 ## RTL Design
