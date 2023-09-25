@@ -17,7 +17,7 @@ The ALU block is responsible for the following key functions:
 ## Block Interface
 The ALU block has the following interface: 
 
-![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/ca19d944-33e8-4f8c-ac82-8a3f3bc50937)
+![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/224734a7-b2ca-450d-ad92-1a1d1fa341d4)
 
 - **Inputs:**
   - `A` and `B`: Input 8-bits data operands for the selected operation.
