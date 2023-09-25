@@ -37,6 +37,8 @@ The workflow of the System Controller is as follows:
 ## Block Interface
 ## Inputs
 
+![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/0db4d45d-85cf-496c-ba73-9b877d364de6)
+
 The System Controller block receives the following inputs:
 
 - **Clock and Reset Signals:**
@@ -85,7 +87,3 @@ The System Controller block provides the following outputs:
 
 - **Clock Divider Output:**
   - `ClkDiv_RX`: Clock Divider Ratio for RX (Width: DATA_BUS_WIDTH-3).
-
-
-![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/0db4d45d-85cf-496c-ba73-9b877d364de6)
-
