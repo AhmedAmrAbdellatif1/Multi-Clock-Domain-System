@@ -4,7 +4,7 @@ This document provides an overview of the Application-Specific Integrated Circui
 ## RTL Design
 The RTL (Register-Transfer Level) design phase is the starting point for ASIC development. During this phase, the system's functionality is described using hardware description languages (HDLs) like Verilog or VHDL. Designers create high-level representations of digital logic, specifying the interconnections and operations of various components within the ASIC.
 
-### [SYS_TOP.v](./SYS_TOP.v) Simulation Result
+### [SYS_TOP](./SYS_TOP.v) Simulation Result
 
 ```
 # Write Operation is succeeded with configurations PARITY_ENABLE=1 PARITY_TYPE=0  PRESCALE=32  
@@ -53,9 +53,11 @@ Once the RTL design is complete, synthesis is the next crucial step. In this pha
 ## Post-Synthesis Formal Verification
 After synthesis, formal verification techniques are employed to ensure that the gate-level netlist accurately reflects the original RTL design. Formal methods, such as model checking and equivalence checking, are used to mathematically verify that the design behaves as intended. This phase helps identify and rectify any discrepancies introduced during synthesis.
 
-## DFT Insertion
+![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/24e354db-672d-436b-8089-4b713ce81eb9)
+
+## [DFT Insertion](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/tree/bbccaeeca005c569c398ab85718bef4f8792171a/System%20Top/DFT)
 Design for Testability (DFT) is a critical phase in ASIC development, aimed at ensuring efficient testing of the final chip. During DFT insertion, various test structures, such as scan chains and boundary scan cells, are added to the design. These structures enable comprehensive testing of the ASIC's functionality and help diagnose and debug any faults.
 
-## Post-DFT Formal Verification
+## [Post-DFT Formal Verification](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/tree/bbccaeeca005c569c398ab85718bef4f8792171a/System%20Top/Formal%20Verification%20(POST-DFT))
 Following DFT insertion, formal verification is once again applied to the modified design. This phase ensures that the test structures and DFT logic are correctly integrated into the ASIC and that they do not introduce any unintended behavior. Formal methods play a crucial role in confirming that the DFT enhancements do not compromise the design's integrity.
 
