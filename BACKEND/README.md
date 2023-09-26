@@ -55,7 +55,9 @@ Once the RTL design is complete, synthesis is the next crucial step. In this pha
 ## Post-Synthesis Formal Verification
 After synthesis, formal verification techniques are employed to ensure that the gate-level netlist accurately reflects the original RTL design. Formal methods, such as model checking and equivalence checking, are used to mathematically verify that the design behaves as intended. This phase helps identify and rectify any discrepancies introduced during synthesis.
 
-![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/24e354db-672d-436b-8089-4b713ce81eb9)
+<p align="center">
+  <img src="https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/24e354db-672d-436b-8089-4b713ce81eb9" alt="Post-Synthesis Formal Verification">
+</p>
 
 ## [DFT Insertion](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/tree/bbccaeeca005c569c398ab85718bef4f8792171a/System%20Top/DFT)
 
@@ -67,7 +69,9 @@ Design for Testability (DFT) is a critical phase in ASIC development, aimed at e
 
 Following DFT insertion, formal verification is once again applied to the modified design. This phase ensures that the test structures and DFT logic are correctly integrated into the ASIC and that they do not introduce any unintended behavior. Formal methods play a crucial role in confirming that the DFT enhancements do not compromise the design's integrity.
 
-![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/4546e26e-a7bb-4861-9167-1683401d9534)
+<p align="center">
+  <img src="https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/4546e26e-a7bb-4861-9167-1683401d9534" alt="Your Image Description">
+</p>
 
 ## Physical Design and Place-and-Route (PnR)
 In the Physical Design phase, the logical design is translated into a physical layout. This involves defining the exact locations and sizes of transistors, interconnections, and metal layers on the silicon wafer. The Place-and-Route (PnR) tool plays a crucial role in determining the optimal placement of components and routing of connections to meet performance, power, and area constraints.
