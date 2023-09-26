@@ -105,7 +105,7 @@ Verilog modules with the following functionality and clock domains:
 - It contains the FIFO write pointer and logic for generating the full condition.
   
 <p align="left">
-  <img src="https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/bf34e317-cd15-4b74-8a05-31ada52054ea" width=400 alt="Block Interface">
+  <img src="https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/bf34e317-cd15-4b74-8a05-31ada52054ea" width=800 alt="Block Interface">
 </p>  
 
 ### 7. Gray Code Converter ([GRAY_CONV.v](./GRAY_CONV.v))
