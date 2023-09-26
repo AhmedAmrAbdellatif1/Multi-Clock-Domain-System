@@ -94,12 +94,16 @@ The Parity Check component verifies the parity bit in the received frame, ensuri
 ### 5. Start Bit Check ([start_check.v](./start_check.v))
 Start Bit Check verifies the start bit of the received frame to ensure that data reception begins correctly.
 
-![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/2c481d2e-d0be-4b55-a97d-0ae9a2e92299)
+<p align="left">
+  <img src="https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/2c481d2e-d0be-4b55-a97d-0ae9a2e92299" width=600 alt="Block Interface">
+</p> 
 
 ### 6. Stop Bit Check ([stop_check.v](./stop_check.v))
 Stop Bit Check ensures that the stop bit of the received frame is set to 1, indicating the end of data transmission. If the stop bit is incorrect, an `STP_ERR` signal is raised.
 
-![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/1f555bca-7fa4-4b46-811e-3118e8606ee7)
+<p align="left">
+  <img src="https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/1f555bca-7fa4-4b46-811e-3118e8606ee7" width=600 alt="Block Interface">
+</p>  
 
 ### 7. Finite State Machine (FSM) ([FSM.v](./FSM.v))
 The Finite State Machine (FSM) governs the overall flow of the UART RX block, orchestrating the transitions between different states based on received data and control signals.
