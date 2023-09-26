@@ -72,7 +72,9 @@ The Parity Calculator block determines the parity bit for the serial frame, ensu
 ### 3. MUX (Multiplexer) ([MUX.v](./MUX.v))
 The MUX block selects the appropriate bit from the serial frame for output, facilitating the serial data transmission. It plays a critical role in the serialization process.
 
-![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/193f6e9a-1b06-40d2-895d-7c51ce069470)
+<p align="left">
+  <img src="https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/193f6e9a-1b06-40d2-895d-7c51ce069470" width=600 alt="Block Interface">
+</p>  
 
 ### 4. FSM (Finite State Machine) ([FSM.v](./FSM.v))
 The FSM block controls the flow of data transmission, ensuring that data is sent in the correct order and at the right time. It orchestrates the operation of the entire UART TX block.
