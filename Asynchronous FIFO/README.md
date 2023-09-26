@@ -21,7 +21,9 @@ The Asynchronous FIFO block is characterized by the following key features:
 ## Block Interface
 The Asynchronous FIFO block has the following interface:
 
-![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/e078ff93-2b9c-413b-b1f8-999912ace48f)
+<p align="left">
+  <img src="https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/6c140d02-897a-42cf-a796-daaca31bb94c" width=600 alt="Your Image Description">
+</p>
 
 - **Inputs:**
   - `W_CLK`: Write clock signal.
