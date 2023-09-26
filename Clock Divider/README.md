@@ -9,7 +9,9 @@ In digital systems, managing clock frequencies is crucial for proper operation. 
 ## Block Interface
 The Clock Divider block has the following interface:
 
-![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/0da54eaa-ea99-4f3d-a77f-7d635b0c1992)
+<p align="left">
+  <img src="https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/0da54eaa-ea99-4f3d-a77f-7d635b0c1992" width=600 alt="Block Interface">
+</p>  
 
 - **Inputs:**
   - `I_ref_clk`: Reference clock frequency input.
