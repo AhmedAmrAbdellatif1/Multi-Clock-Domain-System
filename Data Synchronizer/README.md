@@ -9,7 +9,9 @@ The Data Synchronizer employs a Synchronized MUX-Select Synchronization Scheme, 
 ## Block Interface
 The Data Synchronizer block has the following interface:
 
-![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/f7cb8624-704a-4af9-9ba2-c6093e7c7016)
+<p align="left">
+  <img src="https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/f7cb8624-704a-4af9-9ba2-c6093e7c7016" width=600 alt="Block Interface">
+</p>  
 
 - **Inputs:**
   - `unsync_bus`: The unsynchronized data bus to be synchronized across clock domains.
