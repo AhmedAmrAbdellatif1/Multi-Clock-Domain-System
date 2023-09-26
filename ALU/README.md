@@ -17,8 +17,8 @@ The ALU block is responsible for the following key functions:
 ## Block Interface
 The ALU block has the following interface: 
 
-<p align="center">
-  <img src="https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/224734a7-b2ca-450d-ad92-1a1d1fa341d4" alt="Your Image Description">
+<p align="left">
+  <img src="https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/224734a7-b2ca-450d-ad92-1a1d1fa341d4" width=600 alt="Block Interface">
 </p>
 
 - **Inputs:**
