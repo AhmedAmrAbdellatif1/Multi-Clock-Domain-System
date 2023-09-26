@@ -9,7 +9,9 @@ In digital systems, generating accurate and controlled pulses is crucial for syn
 ## Block Interface
 The Pulse Generator block has the following interface:
 
-![image](https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/62298708-7b8a-4481-a8c1-05febe86f983)
+<p align="center">
+  <img src="https://github.com/AhmedAmrAbdellatif1/Multi-Clock-Domain-System/assets/140100601/62298708-7b8a-4481-a8c1-05febe86f983" width=800 alt="Block Interface">
+</p>
 
 - **Inputs:**
   - `CLK`: Clock signal for the sequential elements within the Pulse Generator.
